@@ -1,0 +1,27 @@
+#!/bin/sh
+HISTSIZE=10000
+SAVEHIST=10000
+export HISTIGNORE=' *'
+export PATH="$HOME/.local/bin":$PATH
+export MANPAGER='nvim +Man!'
+export MANWIDTH=999
+export PATH=$HOME/.cargo/bin:$PATH
+export PATH=$HOME/.local/share/go/bin:$PATH
+# export GOPATH=$HOME/.local/share/go
+export GOPATH="$HOME/go"
+export PATH=$HOME/.fnm:$PATH
+export PATH="$PATH:./node_modules/.bin"
+export PATH="$PATH:$HOME/node_modules/.bin"
+export PATH="$PATH:${GOPATH//://bin:}/bin"
+export TERM=screen-256color
+export EDITOR="nvim"
+export PATH="/usr/local/opt/mysql-client/bin:$PATH"
+
+export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
+export PATH="/usr/local/opt/findutils/libexec/gnubin:$PATH"
+export PATH="/usr/local/opt/grep/libexec/gnubin:$PATH"
+export PATH="/usr/local/opt/diffutils/bin:$PATH"
+export PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
+export PATH="/usr/local/opt/gawk/bin:$PATH"
+export PATH="/usr/local/opt/bash/bin:$PATH"
+export PATH="/usr/local/opt/git/bin:$PATH"

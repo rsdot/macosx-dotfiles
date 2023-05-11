@@ -2,6 +2,8 @@
 
 neofetch --color_blocks off
 
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
 # some useful options (man zshoptions)
 setopt autocd extendedglob nomatch menucomplete
 setopt interactive_comments
@@ -47,3 +49,11 @@ zmodload zsh/complist
 # compinit
 _comp_options+=(globdots)		# Include hidden files.
 
+
+# AWS
+# https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-completion.html
+autoload bashcompinit && bashcompinit
+autoload -Uz compinit && compinit
+complete -C '/usr/local/bin/aws_completer' aws
+
+ulimit -n 1024

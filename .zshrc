@@ -1,8 +1,8 @@
 #!/bin/sh
 
-neofetch --color_blocks off
-
 eval "$(/opt/homebrew/bin/brew shellenv)"
+
+neofetch --color_blocks off
 
 # some useful options (man zshoptions)
 setopt autocd extendedglob nomatch menucomplete

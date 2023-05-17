@@ -41,7 +41,7 @@ export FZF_DEFAULT_OPTS="--history-size=10000 -x --inline-info -i --multi --reve
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
 # completions
-[ -d /usr/local/share/zsh/site-functions ] && fpath+="/usr/local/share/zsh/site-functions/"
+[ -d /opt/homebrew/share/zsh/site-functions ] && fpath+="/opt/homebrew/share/zsh/site-functions/"
 autoload -Uz compinit
 zstyle ':completion:*' menu select
 # zstyle ':completion::complete:lsof:*' menu yes select
@@ -54,6 +54,6 @@ _comp_options+=(globdots)		# Include hidden files.
 # https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-completion.html
 autoload bashcompinit && bashcompinit
 autoload -Uz compinit && compinit
-complete -C '/usr/local/bin/aws_completer' aws
+complete -C '/opt/homebrew/bin/aws_completer' aws
 
 ulimit -n 1024
